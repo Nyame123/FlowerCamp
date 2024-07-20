@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Flower Camp"
 include(":app")
+include(":domain")
+include(":data")

@@ -10,6 +10,7 @@ abstract class FlowerDatabase : RoomDatabase() {
 
     companion object {
         const val VERSION = 1
+        const val NAME = "flowers"
     }
 
     abstract fun getFlowerDao(): FlowerDao

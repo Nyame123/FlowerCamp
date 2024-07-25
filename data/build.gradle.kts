@@ -47,7 +47,7 @@ dependencies {
     implementation(libs.android.retrofit.gson)
     implementation(libs.okhttp.network)
     implementation(libs.okhttp.loging.network)
-    implementation(libs.android.room)
+    api(libs.android.room)
     implementation(libs.android.room.ktx)
     ksp(libs.android.room.compiler)
     implementation(libs.javax.android)

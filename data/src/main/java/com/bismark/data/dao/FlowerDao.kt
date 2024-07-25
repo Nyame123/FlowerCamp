@@ -14,7 +14,7 @@ interface FlowerDao{
     suspend fun getFlowerById(id: Long): FlowerEntity
 
     @Query("Select * from FlowerEntity")
-    suspend fun getFlowerById(): List<FlowerEntity>
+    suspend fun getFlowers(): List<FlowerEntity>
 
     @Update
     suspend fun updateFlower(vararg flowerEntity: FlowerEntity): Int
@@ -23,5 +23,5 @@ interface FlowerDao{
     suspend fun insertFlower(vararg flowerEntity: FlowerEntity): List<Long>
 
     @Delete
-    suspend fun deleteFlower()
+    suspend fun deleteFlower(vararg flowerEntity: FlowerEntity)
 }

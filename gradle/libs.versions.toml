@@ -16,6 +16,7 @@ okHttpVersion = "4.12.0"
 roomVersion = "2.6.1"
 hiltVersion = "2.51"
 javaxInjectVersion = "1"
+chuckerLibraryVersion = "4.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,6 +51,8 @@ android-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", versio
 android-retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 okhttp-network = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttpVersion" }
 okhttp-loging-network = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpVersion" }
+chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chuckerLibraryVersion" }
+chucker-op = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chuckerLibraryVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

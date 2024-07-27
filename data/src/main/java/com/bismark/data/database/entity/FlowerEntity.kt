@@ -1,4 +1,4 @@
-package com.bismark.data
+package com.bismark.data.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

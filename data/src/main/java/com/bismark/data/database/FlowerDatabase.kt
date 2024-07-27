@@ -2,8 +2,8 @@ package com.bismark.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.bismark.data.FlowerEntity
-import com.bismark.data.dao.FlowerDao
+import com.bismark.data.database.entity.FlowerEntity
+import com.bismark.data.database.dao.FlowerDao
 
 @Database(entities = [FlowerEntity::class], version = FlowerDatabase.VERSION, exportSchema = true)
 abstract class FlowerDatabase : RoomDatabase() {

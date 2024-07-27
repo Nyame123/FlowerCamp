@@ -1,11 +1,11 @@
-package com.bismark.data.dao
+package com.bismark.data.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.bismark.data.FlowerEntity
+import com.bismark.data.database.entity.FlowerEntity
 
 @Dao
 interface FlowerDao{

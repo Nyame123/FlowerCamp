@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.room)
 }
 
+val BASE_URL = "BASE_URL"
 android {
     namespace = "com.bismark.data"
     compileSdk = 34
@@ -12,8 +13,13 @@ android {
     defaultConfig {
         minSdk = 26
 
+        buildConfigField("String",BASE_URL,"\"http://localhost:8080/api/\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     room{
@@ -40,17 +46,21 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.android.retrofit)
-    implementation(libs.android.retrofit.gson)
-    implementation(libs.okhttp.network)
+    api(libs.android.retrofit)
+    api(libs.android.retrofit.gson)
+    api(libs.okhttp.network)
     implementation(libs.okhttp.loging.network)
     api(libs.android.room)
     implementation(libs.android.room.ktx)
     ksp(libs.android.room.compiler)
     implementation(libs.javax.android)
+
+    debugImplementation(libs.chucker.op)
+    releaseImplementation(libs.chucker.no.op)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
